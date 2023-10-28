@@ -1,0 +1,50 @@
+main {
+    .title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 1.2rem;
+            min-height: calc(100vh - 300px);
+
+            h1 {
+                font-size: 5rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-family: 'Michroma';
+            }
+
+            h5 {
+                font-size: 1.2rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+
+        &__floating-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            p {
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+            }
+
+            img {
+                width: 2rem;
+                object-fit: contain;
+            }
+        }
+    }
+}
