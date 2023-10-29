@@ -14,3 +14,25 @@ button.primary {
 
     &:hover, &:focus { opacity: .8 }
 }
+
+button.secondary {
+    &, &__white {
+        background: $blue;
+        color: $white;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 11px;
+        padding: 11px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    &__white {
+        background: $white;
+        color: #000;
+    }
+}
