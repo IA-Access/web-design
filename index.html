@@ -21,11 +21,11 @@
         </button>
 
         <ul class="main-links">
-            <li><a href="#">Prompt</a></li>
+            <li><a href="#prompt">Prompt</a></li>
             <span></span>
-            <li><a href="#">Accueil</a></li>
+            <li><a href="#title">Accueil</a></li>
             <span></span>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <button class="icon-link">
@@ -34,19 +34,19 @@
     </header>
 
     <main>
-        <section class="title">
+        <section class="title" id="title">
             <div class="title__content">
                 <h1>IA Access</h1>
                 <h5>L'IA n'a jamais été aussi accessible</h5>
             </div>
 
             <div class="title__floating-box">
-                <p>Nous découvrir</p>
+                <a href="#boost">Nous découvrir</a>
                 <img src="./assets/images/icons/bottom-carret.svg" alt="carret">
             </div>
         </section>
 
-        <section class="subcontent">
+        <section class="subcontent" id="boost">
             <h2>Boostez votre succès x10 🚀</h2>
             <span class="hr"></span>
 
@@ -57,7 +57,7 @@
             </p>
         </section>
 
-        <section class="subcontent">
+        <section class="subcontent" id="goals">
             <h2>Nos objectifs 🎯</h2>
 
             <p>
@@ -70,7 +70,7 @@
             <button class="primary" type="button">Nous rejoindre</button>
         </section>
 
-        <section class="subcontent">
+        <section class="subcontent" id="prompt">
             <h2>Les prompt Ia Access 🤖</h2>
 
             <p>
@@ -84,10 +84,10 @@
             <button class="primary" type="button">Découvrir</button>
         </section>
 
-        <section class="feedback">
+        <section class="feedback" id="feedback">
             <h2>Des avis qui comptent</h2>
 
-            <div class="stars">
+            <div class="feedback__stars">
                 <img src="./assets/images/icons/star.svg" alt="star">
                 <img src="./assets/images/icons/star.svg" alt="star">
                 <img src="./assets/images/icons/star.svg" alt="star">
@@ -162,59 +162,75 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="faq__title">
                 <h2>FAQ 🆘</h2>
                 <h4>Tu as encore des questions ?<br>Contacte nous !</h4>
 
-                <button class="primary" type="button">Contact</button>
+                <button class="primary" type="button" onclick="window.location.href = '#contact'">
+                    Contact
+                </button>
             </div>
 
             <div class="faq__content">
-                <details>
-                    <summary>
-                        <span>Quels types de cours sont disponibles sur IA Access ?</span>
-                        <span><img src="./assets/images/icons/left-carret.svg" alt="carret"></span>
-                    </summary>
-
-                    <!-- content -->
-                </details>
-
-                <details>
-                    <summary>
-                        <span>Y'a-t-il un support disponible sur IA ACCESS ?</span>
-                        <span><img src="./assets/images/icons/left-carret.svg" alt="carret"></span>
-                    </summary>
-
-                    <!-- content -->
-                </details>
-
-                <details>
-                    <summary>
-                        <span>
-                            Est-ce que les cours sur IA ACCESS sont accessibles à tout moment ?
-                        </span>
-                        <span><img src="./assets/images/icons/left-carret.svg" alt="carret"></span>
-                    </summary>
-
-                    <!-- content -->
-                </details>
-
                 <details>
                     <summary>
                         <span>
                             Est-ce que IA ACCESS offre des opportunités de réseautage avec d'autres
                             apprenants et professionnels de l'IA ?
                         </span>
-                        <span><img src="./assets/images/icons/left-carret.svg" alt="carret"></span>
+                        <span><img src="./assets/images/icons/bottom-carret.svg" alt="carret"></span>
                     </summary>
 
-                    <!-- content -->
+                    IA ACCESS est une plateforme qui offre des opportunités de réseautage avec
+                    d'autres apprenants et professionnels de l'intelligence artificielle. Elle
+                    favorise la collaboration et la communication au sein de sa communauté pour
+                    permettre aux utilisateurs de partager des connaissances et de développer leur
+                    réseau professionnel.
+                </details>
+
+                <details>
+                    <summary>
+                        <span>Quels types de communautés sont établies par IA ACCESS</span>
+                        <span><img src="./assets/images/icons/bottom-carret.svg" alt="carret"></span>
+                    </summary>
+
+                    IA ACCESS établit des communautés d'apprenants et de professionnels de
+                    l'intelligence artificielle, permettant aux membres de se connecter, de
+                    collaborer et de partager leurs connaissances dans le domaine de l'IA. Ces
+                    communautés sont conçues pour encourager l'échange d'idées, l'apprentissage
+                    mutuel et le réseautage au sein de la communauté IA.
+                </details>
+
+                <details>
+                    <summary>
+                        <span>Y'a-t-il un support disponible sur IA ACCESS ?</span>
+                        <span><img src="./assets/images/icons/bottom-carret.svg" alt="carret"></span>
+                    </summary>
+
+                    Oui, sur IA ACCESS, un support est disponible 24/24, 7/7 grâce à nos agents IA
+                    dédiés. De plus, nous proposons également un support sur notre serveur Discord
+                    pour aider nos utilisateurs à tout moment. Nous sommes là pour répondre à vos
+                    questions et résoudre vos problèmes, que ce soit par le biais de notre IA ou de
+                    notre équipe sur Discord.
+                </details>
+
+                <details>
+                    <summary>
+                        <span>Est-ce que les packs de prompt IA ACCESS sont accessibles ?</span>
+                        <span><img src="./assets/images/icons/bottom-carret.svg" alt="carret"></span>
+                    </summary>
+
+                    IA ACCESS propose des packs de prompts qui sont accessibles à tous, que vous
+                    soyez débutant ou personne avancée en intelligence artificielle. Nos prix sont
+                    très avantageux, ce qui vous permet de bénéficier de ces ressources de manière
+                    économique. Notre objectif est de rendre l'accès à des outils IA de qualité
+                    abordable pour tous les niveaux de compétence.
                 </details>
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="ask-us">
             <div class="contact__form">
                 <h2>Une question ? </h2>
 
@@ -271,8 +287,8 @@
     </main>
 
     <footer>
-        <div class="copyright">
-            <div class="copyright__title">
+        <div class="footer__copyright" id="copyright">
+            <div class="footer__copyright__title">
                 <img src="./assets/images/brain.png" alt="brain">
                 <span>IA ACCESS</span>
             </div>
@@ -280,7 +296,7 @@
             <p>Copyright @ 2023</p>
         </div>
 
-        <div class="copyright__link-list">
+        <div class="footer__link-list">
             <h5>Why should you trust us ?</h5>
 
             <ul>
@@ -290,7 +306,7 @@
             </ul>
         </div>
 
-        <div class="copyright__link-list">
+        <div class="footer__link-list" id="contact">
             <h5>Contact</h5>
 
             <ul>
@@ -302,7 +318,7 @@
 
         <div><p>Email contact@ia-access.fr</p></div>
 
-        <div class="copyright__newsletter">
+        <div class="footer__newsletter" id="newsletter">
             <h3>Newsletter</h3>
 
             <form>

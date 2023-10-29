@@ -35,15 +35,154 @@ main {
             align-items: center;
             gap: 1rem;
 
-            p {
+            p, a {
                 font-size: 1rem;
                 text-transform: uppercase;
                 letter-spacing: 1.5px;
             }
 
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                opacity: 1;
+                transition: all 250ms;
+
+                &:hover, &:focus { opacity: .7 }
+            }
+
             img {
                 width: 2rem;
                 object-fit: contain;
+            }
+        }
+    }
+
+    .subcontent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10rem 0;
+        gap: 4rem;
+
+        span.hr {
+            position: relative;
+            display: block;
+            height: 3px;
+            width: min(250px, 80%);
+            background: $white;
+            border-radius: 2px;
+            margin: 100px 0;
+        }
+
+        p { width: max(50%, 250px) }
+    }
+
+    .feedback {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10rem 0;
+
+        &__stars {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: fit-content;
+            background: $white;
+            padding: 10px 20px;
+            border-radius: 26px;
+            gap: 4px;
+            margin: 30px 0;
+
+            img {
+                object-fit: content;
+                height: 1rem;
+                filter: $purple-filter;
+            }
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            margin-top: 50px;
+            gap: 20px;
+            width: 100%;
+
+            &::-webkit-scrollbar { display: none }
+        }
+
+        &__single {
+            background: $white;
+            border-radius: 20px;
+            padding: 30px;
+            width: max(25vw, 450px);
+            min-width: max(25vw, 450px);
+            height: fit-content;
+
+            h4 {
+                margin-bottom: 30px;
+                font-size: 18px;
+            }
+
+            h4, p {
+                color: $purple;
+                font-weight: 600;
+            }
+
+            p { font-size: 14px }
+        }
+    }
+
+    .faq {
+        display: flex;
+        flex-direction: row;
+        padding: 10rem max(5%, 20px);
+        gap: max(5%, 20px);
+
+        &__title {
+            min-width: 250px;
+            h2 { text-align: left }
+
+            h4 {
+                margin: 50px 0;
+                font-weight: 400;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            details {
+                border: 3px solid $white;
+                border-radius: 25px;
+                padding: 40px 20px;
+
+                summary {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    gap: 20px;
+                    cursor: pointer;
+
+                    > span:last-child {
+                        transition: all .3s;
+                        transform: rotate(-90deg);
+                    }
+
+                    &::marker { display: none }
+                }
+
+                &[open] summary {
+                    margin-bottom: 20px;
+                    > span:last-child { transform: rotate(0) }
+                }
             }
         }
     }
