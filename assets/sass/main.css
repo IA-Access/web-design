@@ -1,8 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
-* {
-  font-family: "Montserrat";
-  color: #fff;
+::-webkit-scrollbar {
+  background: #fff;
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a0d7d;
+  border-radius: 6px;
+  border: 2px solid #fff;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -11,13 +22,50 @@ body {
   background-image: url(../images/background.svg);
   background-repeat: repeat;
 }
+body main h2 {
+  font-family: "Michroma";
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+img {
+  pointer-events: none;
+}
 
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+button.primary {
+  background: #5b2be2;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
+  transition: all 0.3s;
+  opacity: 1;
+  cursor: pointer;
+}
+button.primary:hover, button.primary:focus {
+  opacity: 0.8;
 }
 
 header {
+  position: sticky !important;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,6 +73,9 @@ header {
   text-transform: uppercase;
   gap: min(5%, 40px);
   margin: min(5%, 50px) 0;
+  top: -1px;
+  z-index: 100;
+  transition: all 0.2s;
 }
 header ul {
   position: relative;
@@ -60,10 +111,33 @@ header ul::after {
   border-radius: 30px;
 }
 header ul li {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.3s;
   list-style: none;
   font-size: 1rem;
 }
+header ul li::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
+  transform: translate(50%, 3px);
+}
+header ul li:hover {
+  top: -3px;
+}
+header ul li:hover::after {
+  width: 50%;
+}
 header ul li a {
+  padding-bottom: 4px;
   text-decoration: none;
 }
 header ul > span {
@@ -81,6 +155,13 @@ header .icon-link {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: none;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.4s;
+  transition: all 0.4s;
 }
 header .icon-link::before {
   content: "";
@@ -111,6 +192,54 @@ header .icon-link img {
   height: 40%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+header .icon-link::before {
+  transform: rotate(0);
+  transition: all 0.5s ease-in-out;
+}
+header .icon-link:hover, header .icon-link:focus {
+  opacity: 0.7;
+}
+header .icon-link:hover::before, header .icon-link:focus::before {
+  transform: rotate(260deg);
+}
+header.sticky {
+  position: relative;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+header.sticky::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(270deg, #4714d8, #d8145b);
+  z-index: -1;
+  border-radius: 0px;
+}
+header.sticky::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  top: 3px;
+  left: 3px;
+  background: #37335a;
+  z-index: -1;
+  border-radius: 0px;
+}
+header.sticky ul {
+  width: calc(90% - 100px);
+}
+header.sticky ul > span {
+  display: none;
+}
+header.sticky .icon-link::before, header.sticky .icon-link::after {
+  display: none;
 }
 
 main .title {

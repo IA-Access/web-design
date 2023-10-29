@@ -27,3 +27,28 @@
         border-radius: $border-radius;
     }
 }
+
+@mixin animated-border($color: $white) {
+    position: relative;
+    width: fit-content;
+    transition: all .3s;
+
+    &::after {
+        content: '';
+        display: block;
+        position: relative;
+        top: 0;
+        width: 0;
+        // width: 50%;
+        height: 1px;
+        background: $color;
+        border-radius: 2px;
+        transition: all .3s;
+        transform: translate(50%, 3px);
+    }
+
+    &:hover {
+        top: -3px;
+        &::after { width: 50% }
+    }
+}

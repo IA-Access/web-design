@@ -1,4 +1,5 @@
 header {
+    position: sticky !important;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -6,6 +7,9 @@ header {
     text-transform: uppercase;
     gap: min(5%, 40px);
     margin: min(5%, 50px) 0;
+    top: -1px;
+    z-index: 100;
+    transition: all .2s;
 
     ul {
         @include grey-with-gradient-border(30px);
@@ -18,10 +22,12 @@ header {
         height: 60px;
 
         li {
+            @include animated-border;
             list-style: none;
             font-size: 1rem;
 
             a {
+                padding-bottom: 4px;
                 text-decoration: none;
             }
         }
@@ -44,11 +50,41 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background: none;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        opacity: .4s;
+        transition: all .4s;
 
         img {
             width: 40%;
             height: 40%;
             object-fit: contain;
         }
+
+        &::before {
+            transform: rotate(0);
+            transition: all .5s ease-in-out;
+        }
+
+        &:hover, &:focus {
+            opacity: .7;
+            &::before { transform: rotate(260deg) }
+        }
+    }
+
+    &.sticky {
+        @include grey-with-gradient-border;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        ul {
+            width: calc(90% - 100px);
+            > span { display: none }
+        }
+
+        .icon-link { &::before, &::after { display: none } }
     }
 }

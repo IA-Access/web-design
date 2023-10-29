@@ -1,0 +1,16 @@
+button.primary {
+    background: $purple;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+    color: $white;
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    transition: all .3s;
+    opacity: 1;
+    cursor: pointer;
+
+    &:hover, &:focus { opacity: .8 }
+}
