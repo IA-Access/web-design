@@ -186,4 +186,44 @@ main {
             }
         }
     }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        padding: 10rem max(5%, 20px);
+        gap: max(5%, 20px);
+
+        &__form {
+            h2 { margin-bottom: 2rem }
+            width: calc(60vw - 100px);
+        }
+
+        &__quote {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            width: calc(40vw - 180px);
+            border-radius: 28px;
+            background: #241d67e6;
+            padding: 40px;
+            overflow: hidden;
+            font-size: 1.6rem;
+
+            i { font-size: 1.4rem }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url(../images/computers.png) $background-grey 50% / cover no-repeat;
+                z-index: -1;
+                border-radius: 28px;
+            }
+        }
+    }
 }
