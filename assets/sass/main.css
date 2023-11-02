@@ -233,6 +233,136 @@ form.single-input button:hover, form.single-input button:focus {
   opacity: 0.8;
 }
 
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 450px;
+}
+.auth-form h2 {
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+  text-align: left;
+  text-transform: capitalize;
+  width: 100%;
+}
+.auth-form__input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #fff;
+  padding: 16px 20px;
+  gap: 1em;
+  border-radius: 30px;
+  margin: 6px 0;
+  width: 100%;
+}
+.auth-form__input-box label {
+  width: 20px;
+}
+.auth-form__input-box label img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.auth-form__input-box input {
+  color: #fff;
+  line-height: 115%;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  font-weight: 400;
+}
+.auth-form__input-box input::-moz-placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+.auth-form__input-box input::placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+.auth-form__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 100%;
+}
+.auth-form__links a {
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 1;
+  transition: all 250ms;
+}
+.auth-form__links a:hover, .auth-form__links a:focus {
+  opacity: 0.8;
+}
+.auth-form__input-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 8px;
+}
+.auth-form__input-checkbox label {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.auth-form__input-checkbox input {
+  position: relative;
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+.auth-form__input-checkbox input::before, .auth-form__input-checkbox input::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  background: #fff;
+  transform: rotate(45deg) scale(0.8);
+  top: 8px;
+  left: 2px;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.1s;
+}
+.auth-form__input-checkbox input::after {
+  transform: rotate(135deg) scale(0.8);
+}
+.auth-form__input-checkbox input:checked::before, .auth-form__input-checkbox input:checked::after {
+  opacity: 1;
+}
+.auth-form__input-checkbox input:hover::before, .auth-form__input-checkbox input:hover::after {
+  opacity: 0.5;
+}
+.auth-form button {
+  margin: 40px 0 20px;
+  width: 50%;
+}
+.auth-form .alternative {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.auth-form .alternative a {
+  font-weight: 700;
+  margin-left: 2px;
+}
+
 header {
   position: sticky !important;
   display: flex;
@@ -411,14 +541,58 @@ header.sticky .icon-link::before, header.sticky .icon-link::after {
   display: none;
 }
 
-main .title {
+main.auth {
+  display: flex;
+  flex-direction: row;
+  background: #09084a;
+  height: 100vh;
+}
+main.auth .text-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+}
+main.auth .text-info .content {
+  width: 50%;
+}
+main.auth .text-info .content h1 {
+  font-family: "Michroma";
+  font-weight: 400;
+  font-size: 4rem;
+}
+main.auth .text-info .content h5 {
+  position: relative;
+  top: -10px;
+  left: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+main.auth .text-info .content p {
+  margin-top: 1rem;
+  padding: 0 4px;
+  font-size: 1.2rem;
+}
+main.auth .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+  background: rgba(217, 217, 217, 0.1490196078);
+}
+
+main:not(.auth) .title {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main .title__content {
+main:not(.auth) .title__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -426,44 +600,44 @@ main .title__content {
   padding-bottom: 1.2rem;
   min-height: calc(100vh - 300px);
 }
-main .title__content h1 {
+main:not(.auth) .title__content h1 {
   font-size: 5rem;
   font-weight: 400;
   text-transform: uppercase;
   font-family: "Michroma";
 }
-main .title__content h5 {
+main:not(.auth) .title__content h5 {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-main .title__floating-box {
+main:not(.auth) .title__floating-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-main .title__floating-box p, main .title__floating-box a {
+main:not(.auth) .title__floating-box p, main:not(.auth) .title__floating-box a {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
-main .title__floating-box a {
+main:not(.auth) .title__floating-box a {
   cursor: pointer;
   text-decoration: none;
   opacity: 1;
   transition: all 250ms;
 }
-main .title__floating-box a:hover, main .title__floating-box a:focus {
+main:not(.auth) .title__floating-box a:hover, main:not(.auth) .title__floating-box a:focus {
   opacity: 0.7;
 }
-main .title__floating-box img {
+main:not(.auth) .title__floating-box img {
   width: 2rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main .subcontent {
+main:not(.auth) .subcontent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -471,7 +645,7 @@ main .subcontent {
   padding: 10rem 0;
   gap: 4rem;
 }
-main .subcontent span.hr {
+main:not(.auth) .subcontent span.hr {
   position: relative;
   display: block;
   height: 3px;
@@ -480,16 +654,16 @@ main .subcontent span.hr {
   border-radius: 2px;
   margin: 100px 0;
 }
-main .subcontent p {
+main:not(.auth) .subcontent p {
   width: max(50%, 250px);
 }
-main .feedback {
+main:not(.auth) .feedback {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10rem 0;
 }
-main .feedback__stars {
+main:not(.auth) .feedback__stars {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -501,13 +675,13 @@ main .feedback__stars {
   gap: 4px;
   margin: 30px 0;
 }
-main .feedback__stars img {
+main:not(.auth) .feedback__stars img {
   -o-object-fit: content;
      object-fit: content;
   height: 1rem;
   filter: invert(19%) sepia(82%) saturate(6198%) hue-rotate(256deg) brightness(89%) contrast(98%);
 }
-main .feedback__container {
+main:not(.auth) .feedback__container {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -515,10 +689,10 @@ main .feedback__container {
   gap: 20px;
   width: 100%;
 }
-main .feedback__container::-webkit-scrollbar {
+main:not(.auth) .feedback__container::-webkit-scrollbar {
   display: none;
 }
-main .feedback__single {
+main:not(.auth) .feedback__single {
   background: #fff;
   border-radius: 20px;
   padding: 30px;
@@ -527,44 +701,44 @@ main .feedback__single {
   height: -moz-fit-content;
   height: fit-content;
 }
-main .feedback__single h4 {
+main:not(.auth) .feedback__single h4 {
   margin-bottom: 30px;
   font-size: 18px;
 }
-main .feedback__single h4, main .feedback__single p {
+main:not(.auth) .feedback__single h4, main:not(.auth) .feedback__single p {
   color: #5b2be2;
   font-weight: 600;
 }
-main .feedback__single p {
+main:not(.auth) .feedback__single p {
   font-size: 14px;
 }
-main .faq {
+main:not(.auth) .faq {
   display: flex;
   flex-direction: row;
   padding: 10rem max(5%, 20px);
   gap: max(5%, 20px);
 }
-main .faq__title {
+main:not(.auth) .faq__title {
   min-width: 250px;
 }
-main .faq__title h2 {
+main:not(.auth) .faq__title h2 {
   text-align: left;
 }
-main .faq__title h4 {
+main:not(.auth) .faq__title h4 {
   margin: 50px 0;
   font-weight: 400;
 }
-main .faq__content {
+main:not(.auth) .faq__content {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-main .faq__content details {
+main:not(.auth) .faq__content details {
   border: 3px solid #fff;
   border-radius: 25px;
   padding: 40px 20px;
 }
-main .faq__content details summary {
+main:not(.auth) .faq__content details summary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -574,32 +748,32 @@ main .faq__content details summary {
   gap: 20px;
   cursor: pointer;
 }
-main .faq__content details summary > span:last-child {
+main:not(.auth) .faq__content details summary > span:last-child {
   transition: all 0.3s;
   transform: rotate(-90deg);
 }
-main .faq__content details summary::marker {
+main:not(.auth) .faq__content details summary::marker {
   display: none;
 }
-main .faq__content details[open] summary {
+main:not(.auth) .faq__content details[open] summary {
   margin-bottom: 20px;
 }
-main .faq__content details[open] summary > span:last-child {
+main:not(.auth) .faq__content details[open] summary > span:last-child {
   transform: rotate(0);
 }
-main .contact {
+main:not(.auth) .contact {
   display: flex;
   flex-direction: row;
   padding: 10rem max(5%, 20px);
   gap: max(5%, 20px);
 }
-main .contact__form {
+main:not(.auth) .contact__form {
   width: calc(60vw - 100px);
 }
-main .contact__form h2 {
+main:not(.auth) .contact__form h2 {
   margin-bottom: 2rem;
 }
-main .contact__quote {
+main:not(.auth) .contact__quote {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -611,10 +785,10 @@ main .contact__quote {
   overflow: hidden;
   font-size: 1.6rem;
 }
-main .contact__quote i {
+main:not(.auth) .contact__quote i {
   font-size: 1.4rem;
 }
-main .contact__quote::before {
+main:not(.auth) .contact__quote::before {
   content: "";
   display: block;
   position: absolute;

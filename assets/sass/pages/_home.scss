@@ -1,4 +1,4 @@
-main {
+main:not(.auth) {
     .title {
         position: relative;
         display: flex;

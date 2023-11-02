@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/sass/main.css">
+
+</head>
+<body>
+
+    <main class="auth">
+        <div class="text-info">
+            <h1>Bienvenue !</h1>
+            <h5>Nous sommes heureux de vous rencontrer</h5>
+            <p>Inscrivez-vous pour accéder au site avec votre compte.</p>
+        </div>
+
+        <div class="form-container">
+            <form class="auth-form">
+                <h2>S'inscrire</h2>
+
+                <div class="auth-form__input-box">
+                    <label for="username">
+                        <img src="./assets/images/icons/user.svg" alt="user">
+                    </label>
+
+                    <input type="text" name="username" id="username" placeholder="Nom d'utilisateur">
+                </div>
+
+                <div class="auth-form__input-box">
+                    <label for="email">
+                        <img src="./assets/images/icons/envelope.svg" alt="envelope">
+                    </label>
+
+                    <input type="email" name="email" id="email" placeholder="Adresse e-mail">
+                </div>
+
+                <div class="auth-form__input-box">
+                    <label for="password">
+                        <img src="./assets/images/icons/lock.svg" alt="lock">
+                    </label>
+
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Mot de passe"
+                    >
+                </div>
+
+                <div class="auth-form__input-box">
+                    <label for="confirm_password">
+                        <img src="./assets/images/icons/db-checkmark.svg" alt="db-checkmark">
+                    </label>
+
+                    <input
+                        type="password"
+                        name="confirm_password"
+                        id="confirm_password"
+                        placeholder="Confirmer votre mot de passe"
+                    >
+                </div>
+
+                <div class="auth-form__links">
+                    <div class="auth-form__input-checkbox">
+                        <label for="remember-me">Se souvenir de moi</label>
+                        <input type="checkbox" name="remember-me" id="remember-me">
+                    </div>
+                </div>
+
+                <button class="primary auth-form__submit" type="submit">S'inscrire</button>
+                <p class="alternative">Déjà inscrit ? <a href="#">Se connecter</a></p>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
