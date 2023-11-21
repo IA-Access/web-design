@@ -657,6 +657,87 @@ main:not(.auth) .subcontent span.hr {
 main:not(.auth) .subcontent p {
   width: max(50%, 250px);
 }
+main:not(.auth) .subcontent#experts > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 50px 0;
+}
+main:not(.auth) .subcontent#experts > ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 150px;
+  height: 250px;
+}
+main:not(.auth) .subcontent#experts > ul li img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+main:not(.auth) .subcontent#experts > ul li span {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 6px;
+}
+main:not(.auth) .subcontent#community .discord {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main:not(.auth) .subcontent#community .discord, main:not(.auth) .subcontent#community .discord > div {
+  height: 7.5rem;
+  min-height: 7.5rem;
+}
+main:not(.auth) .subcontent#community .discord .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main:not(.auth) .subcontent#community .discord .link p {
+  text-align: right;
+}
+main:not(.auth) .subcontent#community .discord .link .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1em;
+  width: 100%;
+}
+main:not(.auth) .subcontent#community .discord .link .buttons img {
+  width: 1rem;
+  height: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scale(1.5);
+}
+main:not(.auth) .subcontent#community .discord .line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: #fff;
+}
+main:not(.auth) .subcontent#community .discord .content, main:not(.auth) .subcontent#community .discord .content p {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main:not(.auth) .subcontent#community .discord .content p, main:not(.auth) .subcontent#community .discord .content ul li {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+}
+main:not(.auth) .subcontent#community .discord .content ul {
+  padding-left: 1rem;
+}
 main:not(.auth) .feedback {
   display: flex;
   flex-direction: column;
