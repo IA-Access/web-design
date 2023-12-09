@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 ::-webkit-scrollbar {
@@ -914,12 +915,23 @@ main:not(.auth) .contact__quote::before {
   padding: 10em 5em;
   gap: 5em;
 }
+.product-list__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 10rem;
+}
+.product-list__title p {
+  width: max(50%, 250px);
+}
 .product-list__card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(33% - 3.4em);
+  width: calc(33% - 5em);
   padding: 40px 0;
 }
 .product-list__card::before {
@@ -953,7 +965,7 @@ main:not(.auth) .contact__quote::before {
      object-fit: contain;
 }
 .product-list__card span.type {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   padding: 10px 40px;
   background: #4714d8;
@@ -972,6 +984,16 @@ main:not(.auth) .contact__quote::before {
   font-weight: 400;
   margin: 20px 0 10px;
 }
+.product-list__card ul {
+  list-style: "✓" outside;
+  font-size: 0.9rem;
+  margin: 1.5em 0 2.8em;
+  text-align: left;
+}
+.product-list__card ul li {
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
 .product-list__card button {
-  width: 90%;
+  width: 85%;
 }
